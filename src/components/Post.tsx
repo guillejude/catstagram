@@ -9,6 +9,7 @@ import { Box } from './Box';
 import TagBase from './Tag';
 import Comments from './Comments';
 import Comment from './Comment';
+import Heart from './Heart';
 
 interface PostHeaderProps {
   user: PostModel['user'];
@@ -45,6 +46,7 @@ const PostFooter: React.FC<PostProps> = ({ post }) => {
         ))
         }
       </TagsContainer>
+      <Heart isLiked={false}></Heart>
       <Box mTop={'lg'}>
         <Comment comment={postDescriptionAsComment} />
         <Comments comments={post.comments} />
